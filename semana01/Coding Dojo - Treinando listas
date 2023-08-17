@@ -1,12 +1,18 @@
-l = [100, 101, 102, 103, 104, 105, 110, 111, 113, 114, 115, 150]
+l = [5,6, 8, 100, 101, 102, 103, 104, 105,107, 110, 111, 113, 114, 115, 150, 151]
 l2 = []
 l3 = []
 
 for i in range(len(l)):
-    if l[-1] == l[i]:
-        l3.append(l[i])
-        print(l3)
-        
+    if l[-1] == l[i] and l[-1] -1 != l[-2] or l[-1] -1 == l[-2] and l[-1] == l[i]:
+        if l[-1] -1 == l[-2]:
+            l3.append(l[-2])
+            l3.append(l[-1])
+            print(l3)
+            break
+        else:
+            l3.append(l[i])
+            print(l3)
+            
     elif l[i] + 1 == l[i + 1]:
         l2.append(l[i])
         l2.append(l[i + 1])
@@ -22,4 +28,3 @@ for i in range(len(l)):
             print(l3)
             l2 = []
             l3 = []
-        
