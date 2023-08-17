@@ -1,16 +1,13 @@
-lista = [1, 2, 2, 3, 4, 5, 5, 6, 7, 8, 8, 9, 10, 10]
-l_repitidos = []
+l = [100, 2, 1, 2, 3, 3, 4, 5, 5, 6, 7, 7, 8, 8, 9, 10, 100]
 l_unicos = []
-lista_copia = lista[:]
+l_repetidos = []
 
-for a in lista_copia:
-    lista_copia.remove(a)
-    for b in lista_copia:
-        if a == b:
-            l_repitidos.append(b)
-        else
-                      
-                
-print(l_repitidos)
-print(l_unicos)
-           
+for i in l:
+    if i not in l_unicos and i not in l_repetidos:
+        l_unicos.append(i)
+    elif i in l_unicos:
+        l_unicos.remove(i)
+        l_repetidos.append(i)
+
+print("Repetidos:",l_repetidos,"Unicos:", l_unicos)
+
