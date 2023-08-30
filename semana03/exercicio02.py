@@ -9,7 +9,7 @@ matriz = [
 soma = 0
 for line in range(len(matriz)):
     for colunm in range(len(matriz[line])):
-        if line != colunm and line - colunm > 0:
+        if line - colunm > 0:
             soma += matriz[line][colunm]
             
 print("Resultado da soma:", soma)
