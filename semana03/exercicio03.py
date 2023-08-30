@@ -15,11 +15,15 @@ def dinheiro_entregar(saque):
             saque -= 10
             
     print("Cedulas a serem recebidas:")
-    print(cedulas.count(100), "de R$", 100)
-    print(cedulas.count(50), "de R$", 50)
-    print(cedulas.count(20), "de R$", 20)
-    print(cedulas.count(10), "de R$", 10)
-
+    if cedulas.count(100) > 0:
+        print(cedulas.count(100),"de R$", 100)
+    if cedulas.count(50) > 0:
+        print(cedulas.count(50),"de R$", 50)
+    if cedulas.count(20) > 0:
+        print(cedulas.count(20),"de R$", 20)
+    if cedulas.count(10) > 0:
+        print(cedulas.count(10),"de R$", 10)
+    
 def main():
     saque = int(input("Informe o valor do saque:"))
     if saque % 10 == 0:
