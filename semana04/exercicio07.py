@@ -84,7 +84,6 @@ def main():
             
         elif opc == 3:
             delete_phone(agenda)
-            print(agenda)
             
         elif opc == 4:
             delete_contact(agenda)
