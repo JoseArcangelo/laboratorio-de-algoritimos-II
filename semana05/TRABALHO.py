@@ -108,8 +108,3 @@ def main():
             print("--OPÇÃO INVÁLIDA!!!--")
 
 main()
-
-        else:
-            print("--OPÇÃO INVÁLIDA!!!--")
-
-main()
