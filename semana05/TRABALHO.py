@@ -19,7 +19,7 @@ def add_product(my_products):
     else:
         description = {
             "amount": amount,
-            "price": float(input(f"Informe o preço unitário do produto {name}:")),
+            "price": float(input(f"Informe o preço unitário do produto {name}: ")),
         }
         my_products[name] = description
 
@@ -56,13 +56,14 @@ def sell_produts(my_products, sales_record):
             print("Valor total da venda: R$", profit_sale)
 
             if name not in sales_record:
-                detals = {}
-                detals["sale"] = profit_sale
-                detals["amount"] = quantity_sell
+                detals = {
+                    "total_sale": profit_sale,
+                    "amount": quantity_sell
+                }
                 sales_record[name] = detals
 
             else:
-                sales_record[name]["sale"] += profit_sale
+                sales_record[name]["total_sale"] += profit_sale
                 sales_record[name]["amount"] += quantity_sell
 
             if my_products[name]["amount"] == 0:
@@ -76,7 +77,7 @@ def sell_produts(my_products, sales_record):
 def sales(sales_record):
     print("\n--RELATÓRIO DE VENDAS--")
     for product in sales_record:
-        print(f"--> Nome do produto: {product} - Quantidade vendida: {sales_record[product]['amount']} unidade - Lucro total: R$ {sales_record[product]['sale']}")
+        print(f"--> Nome do produto: {product} - Quantidade vendida: {sales_record[product]['amount']} unidade - Lucro total: R$ {sales_record[product]['total_sale']}")
 
 def main():
     print("---<BEM VINDO AO MERCADINHO DO PILÉCO>---")
