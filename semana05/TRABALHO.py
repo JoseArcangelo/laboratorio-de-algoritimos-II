@@ -11,7 +11,7 @@ def menu():
 def add_product(my_products):
     print("\n --ADICIONAR PRODUTO--")
     name = input("Informe o nome do produto: ")
-    amount = int(input(f"Informe a quantidade que deseja adicionar ao estoque de {name}: ")
+    amount = int(input(f"Informe a quantidade que deseja adicionar ao estoque de {name}: "))
 
     if name in my_products:
         my_products[name]["amount"] += amount
@@ -30,7 +30,7 @@ def search_product(my_products):
     print("\n--BUSCAR PRODUTO--")
     name = input("Informe o nome do produto que deseja encontrar: ")
     if name in my_products:
-        print(f"Informações do produto --> Nome: {name} - Estoque: {my_products[name]['amount']} unidades - Preço: R$ {my_products[name]['price']} \n")
+        print(f"Informações do produto --> Nome: {name} - Estoque: {my_products[name]['amount']} unidades - Preço: R$ {my_products[name]['price']}")
 
     else:
         print("--ESTE PRODUTO NÃO CONSTA EM NOSSO SISTEMA!--")
@@ -38,7 +38,7 @@ def search_product(my_products):
 def show_products(my_products):
     print("\n----LISTA DE PRODUTOS----")
     for product in my_products:
-        print(f"-->Produto: {product} - Quantidade em estoque: {my_products[product]['amount']} unidades - Preço: R$ {my_products[product]['price']}\n")
+        print(f"--> Produto: {product} - Quantidade em estoque: {my_products[product]['amount']} unidades - Preço: R$ {my_products[product]['price']}")
 
 def sell_produts(my_products, sales_record):
     print("\n----VENDER PRODUTO----")
@@ -53,6 +53,7 @@ def sell_produts(my_products, sales_record):
         else:
             my_products[name]["amount"] -= quantity_sell
             profit_sale = quantity_sell * my_products[name]["price"]
+            print("Valor total da venda: R$", profit_sale)
 
             if name not in sales_record:
                 detals = {}
@@ -75,7 +76,7 @@ def sell_produts(my_products, sales_record):
 def sales(sales_record):
     print("\n--RELATÓRIO DE VENDAS--")
     for product in sales_record:
-        print(f"-> Nome do produto: {product} - Quantidade vendida: {sales_record[product]['amount']} unidade - Lucro total: R$ {sales_record[product]['sale']}")
+        print(f"--> Nome do produto: {product} - Quantidade vendida: {sales_record[product]['amount']} unidade - Lucro total: R$ {sales_record[product]['sale']}")
 
 def main():
     print("---<BEM VINDO AO MERCADINHO DO PILÉCO>---")
