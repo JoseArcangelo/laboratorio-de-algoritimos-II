@@ -39,6 +39,6 @@ Encerra o programa.
 
 ## Autores
 
-José Arcangelo de Souza Garlet.
+José Arcangelo de Souza Garlet  
 Lucas Descovi.
 
