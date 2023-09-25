@@ -37,8 +37,8 @@ Encerra o programa.
 2. Escolha uma das opções do menu digitando o número correspondente.
 3. Siga as instruções na tela para realizar a ação desejada.
 
-## Como Usar
+## Autores
 
-José Arcangelo de Souza Garlet
-Lucas Descovi
+José Arcangelo de Souza Garlet.
+Lucas Descovi.
 
