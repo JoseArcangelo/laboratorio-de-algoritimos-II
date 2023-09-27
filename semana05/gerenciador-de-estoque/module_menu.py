@@ -1,5 +1,5 @@
 def menu():
-    """Função que exibe o menu de opções."""
+    """Função que exibe o menu de opções, e retorna a opção desejada."""
     
     print("\n---< MENU >---")
     print("1 - Adicionar um produto")
