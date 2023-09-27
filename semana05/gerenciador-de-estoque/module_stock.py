@@ -6,11 +6,11 @@ def add_product(stock, historical_changes):
 
     print("\n --ADICIONAR PRODUTO--")
     name_product = input("Informe o nome do produto: ")
-    amount = int(
-        input(f"Informe a quantidade que deseja adicionar ao estoque de {name_product}: "))
+    amount = input(f"Informe a quantidade que deseja adicionar ao estoque de {name_product}: ")
     if name_product in stock:
         stock[name_product]["amount"] += amount
         historical_changes.append(f"Foi adicionado {amount} unidades ao estoque de {name_product}")
+
     else:
         price = float(input(f"Informe o preço unitário de {name_product}: "))
         stock[name_product] = {
@@ -19,6 +19,7 @@ def add_product(stock, historical_changes):
             "price_historic": [price],
             "category": input(f"Informe a categoria de {name_product}: "),}
     print("--PRODUTO ADICIONADO!--")
+
     
     return stock, historical_changes
 
@@ -33,7 +34,6 @@ def search_product(stock, sales_record):
         print(f"Quantidade em estoque: {stock[name_product]['amount']} unidadeas")
         print(f"Preço unitário: R$ {stock[name_product]['price_historic'][-1]}")
         print(f"Categoria: {stock[name_product]['category']}")
-
         print(f"\nHistorico de vendas de {name_product}:")
         
         def sale_in_sales_record(product):
