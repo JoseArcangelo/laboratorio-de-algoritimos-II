@@ -41,7 +41,7 @@
 
 <h2 align="justify">Arquitetura do Sistema</h2>
 
-<p> O sisteams é dividido em módulos, modulo main sendo o arquivo central do sistema, e o outros 4 módulos
+<p> O sistema é dividido em módulos, modulo main sendo o arquivo central do sistema, e o outros 4 módulos
   menu, sales, stock e historic. Cada módulo possui um conjunto de funções.</p>
   
 
