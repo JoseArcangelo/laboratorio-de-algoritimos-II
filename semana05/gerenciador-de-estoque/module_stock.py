@@ -20,7 +20,7 @@ def add_product(stock, historical_changes):
             "price": price,
             "price_historic": [price],
             "category": input(f"Informe a categoria de {name_product}: "),}
-        historical_changes.append(f"O produto {name_product} foi adicionado ao estoque - DATA: {date_now}")
+        historical_changes.append(f"O produto {name_product} foi adicionado ao estoque com {amount} unidades - DATA: {date_now}")
 
     print("--PRODUTO ADICIONADO!--")
     
