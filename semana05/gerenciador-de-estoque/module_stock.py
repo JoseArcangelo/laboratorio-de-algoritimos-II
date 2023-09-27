@@ -37,15 +37,19 @@ def search_product(stock, sales_record):
         print(f"Quantidade em estoque: {stock[name_product]['amount']} unidadeas")
         print(f"Preço unitário: R$ {stock[name_product]['price_historic'][-1]}")
         print(f"Categoria: {stock[name_product]['category']}")
+
         print(f"\nHistorico de vendas de {name_product}:")
-        
-        def sale_in_sales_record(product):
-            return name_product in product
+        def sale_in_sales_record(sales_record):
+            return name_product in sales_record
         
         sale = filter(sale_in_sales_record, sales_record)
+
+        verification = False
         for item in sale:
+            verification = True
             print(item)
-        if name_product not in sales_record:
+            
+        if verification == False:
             print(f"Nenhuma venda de {name_product} foi realizada!")
     else:
         print("--ESTE PRODUTO NÃO CONSTA EM NOSSO SISTEMA!--")
