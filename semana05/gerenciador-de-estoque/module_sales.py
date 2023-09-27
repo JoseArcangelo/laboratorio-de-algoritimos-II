@@ -13,7 +13,7 @@ def sell_produts(stock, sales_record, historical_changes):
             print("OPS! O ESTOQUE NÃO POSSUO A QUANTIDADE QUE DESEJA VENDER!")
         else:
             stock[name_product]["amount"] -= quantity_sell
-            profit_sale = quantity_sell * stock[name_product]["price"]
+            profit_sale = quantity_sell * stock[name_product]['price_historic'][-1]
             print("Valor total da venda: R$", profit_sale)
             date_now = datetime.datetime.now()
             date_now = f"{date_now.year}/{date_now.month}/{date_now.day} {date_now.hour} horas {date_now.minute} min"
