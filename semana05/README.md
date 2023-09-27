@@ -1,4 +1,4 @@
-<h1 align="center">Trabalho Avaliativo G1</h1>
+<h1 align="center">Trabalho Avaliativo G1  S2</h1>
 <h1 align="center">Sistemas de informação - Laboratório de Algoritmos II</h1>
 <h1 align="center">AMF</h1>
 
