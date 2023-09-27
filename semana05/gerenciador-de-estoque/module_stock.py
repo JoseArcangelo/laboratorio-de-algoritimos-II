@@ -19,6 +19,7 @@ def add_product(stock, historical_changes):
             "price_historic": [price],
             "category": input(f"Informe a categoria de {name_product}: "),}
     print("--PRODUTO ADICIONADO!--")
+    
     return stock, historical_changes
 
 def search_product(stock, sales_record):
@@ -32,19 +33,23 @@ def search_product(stock, sales_record):
         print(f"Quantidade em estoque: {stock[name_product]['amount']} unidadeas")
         print(f"Preço unitário: R$ {stock[name_product]['price_historic'][-1]}")
         print(f"Categoria: {stock[name_product]['category']}")
-        print(f"Historico de vendas de {name_product}:")
+
+        print(f"\nHistorico de vendas de {name_product}:")
+        
         def sale_in_sales_record(product):
             return name_product in product
-        sale = filter(sale_in_sales_record, sales_record)    
+        sale = filter(sale_in_sales_record, sales_record)
         for item in sale:
             print(item)
     else:
         print("--ESTE PRODUTO NÃO CONSTA EM NOSSO SISTEMA!--")
 
+
 def show_products(stock):
     """Função que lista todos os produtos que estão no estoque,
     ela recebe como parâmetros o estoque."""
     print("\n----LISTA DE PRODUTOS----")
+
     if len(stock) == 0:
         print("OPS! O estoque está vazio!")
 
