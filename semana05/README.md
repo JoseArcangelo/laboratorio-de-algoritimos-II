@@ -1,5 +1,3 @@
-<h1>Trabalho de Lab II<hi/>  
-
 # Gerenciador de Estoque "Mercadinho do Brian"
 
 Este é um programa em Python que permite gerenciar um estoque de produtos em um mercadinho fictício chamado "Mercadinho do Brian". Com este programa, você pode adicionar produtos, buscar informações sobre produtos, vender produtos, gerar relatórios de vendas e muito mais.
