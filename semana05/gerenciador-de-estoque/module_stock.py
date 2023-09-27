@@ -6,10 +6,12 @@ def add_product(stock, historical_changes):
 
     print("\n --ADICIONAR PRODUTO--")
     name_product = input("Informe o nome do produto: ")
-    amount = input(f"Informe a quantidade que deseja adicionar ao estoque de {name_product}: ")
+    amount = int(input(f"Informe a quantidade que deseja adicionar ao estoque de {name_product}: "))
+    date_now = datetime.datetime.now()
+    date_now = f"{date_now.year}/{date_now.month}/{date_now.day} {date_now.hour} horas {date_now.minute} min"
     if name_product in stock:
         stock[name_product]["amount"] += amount
-        historical_changes.append(f"Foi adicionado {amount} unidades ao estoque de {name_product}")
+        historical_changes.append(f"Foi adicionado {amount} unidades ao estoque de {name_product} DATA: {date_now}")
 
     else:
         price = float(input(f"Informe o preço unitário de {name_product}: "))
@@ -18,14 +20,15 @@ def add_product(stock, historical_changes):
             "price": price,
             "price_historic": [price],
             "category": input(f"Informe a categoria de {name_product}: "),}
-    print("--PRODUTO ADICIONADO!--")
+        historical_changes.append(f"O produto {name_product} foi adicionado ao estoque - DATA: {date_now}")
 
+    print("--PRODUTO ADICIONADO!--")
     
     return stock, historical_changes
 
 def search_product(stock, sales_record):
     """Função que busca um produto no estoque e seu histórico de vendas, 
-    ela tem como parâmetros o estoque e o históricode vendas."""
+    ela tem como parâmetros o estoque e o histórico de vendas."""
 
     print("\n--BUSCAR PRODUTO--")
     name_product = input("Informe o nome do produto que deseja encontrar: ")
@@ -38,6 +41,7 @@ def search_product(stock, sales_record):
         
         def sale_in_sales_record(product):
             return name_product in product
+        
         sale = filter(sale_in_sales_record, sales_record)
         for item in sale:
             print(item)
@@ -48,8 +52,8 @@ def search_product(stock, sales_record):
 def show_products(stock):
     """Função que lista todos os produtos que estão no estoque,
     ela recebe como parâmetros o estoque."""
-    print("\n----LISTA DE PRODUTOS----")
 
+    print("\n----LISTA DE PRODUTOS----")
     if len(stock) == 0:
         print("OPS! O estoque está vazio!")
 
@@ -61,13 +65,13 @@ def delete_product(stock, historical_changes):
     """Função que remove um produto do estoque, salvando esta mudança no histórico de alterações,
     ela recebe como parâmetros o estoque e o histórico de alterações."""
 
-    print("\n --ECLUIR PRODUTO--")
+    print("\n --EXCLUIR PRODUTO--")
     name_product = input("Informe o nome do produto que deseja remover de seu estoque: ")
     if name_product in stock:
         stock.pop(name_product)
         print(f"{name_product} foi removido com sucesso!")
         date_now = datetime.datetime.now()
-        date_now = f"{date_now.year}/{date_now.month}/{date_now.day} {date_now.hour} horas {date_now.minute} min e {date_now.second} seg"
+        date_now = f"{date_now.year}/{date_now.month}/{date_now.day} {date_now.hour} horas {date_now.minute} min"
         historical_changes.append(f"O produto {name_product} foi removido do stock - DATA: {date_now}")
     else:
         print("OPS! NÃO POSSUIMOS ESTE PRODUTO!")
@@ -99,10 +103,10 @@ def view_by_category(stock):
 
     print("\n--VISUALIZAR PRODUTOS POR CATEGORIA--")
     name_category = input("Informe o nome da categoria do produto: ")
-    verify = False
+    verification = False
     for product in stock:
         if stock[product]["category"] == name_category:
             print(f"Nome do produto: {product} - Quantidade em estoque: {stock[product]['amount']} - Preço unitário: R$ {stock[product]['price_historic'][-1]}")
-            verify = True
-    if verify == False:
+            verification = True
+    if verification == False:
         print("OPS! O ESTOQUE NÃO POSSUI NENHUM PRODUTO COM ESSA CATEGORIA!")
