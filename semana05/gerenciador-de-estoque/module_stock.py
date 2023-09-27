@@ -45,6 +45,8 @@ def search_product(stock, sales_record):
         sale = filter(sale_in_sales_record, sales_record)
         for item in sale:
             print(item)
+        if name_product not in sales_record:
+            print(f"Nenhuma venda de {name_product} foi realizada!")
     else:
         print("--ESTE PRODUTO NÃO CONSTA EM NOSSO SISTEMA!--")
 
