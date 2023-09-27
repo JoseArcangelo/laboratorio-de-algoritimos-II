@@ -11,6 +11,8 @@ def clear_terminal():
         return os.system('cls') 
 
 def main():
+    """Função central do sistema"""
+
     print("---< GESTÃO DE ESTOQUE MERCADINHO DO BRIAN >---")
     stock = {"chinelo": {"amount": 40, "price_historic": [5], "category": "roupas"}}
     sales_record = []
@@ -33,11 +35,11 @@ def main():
 
         elif option == "4":
             clear_terminal()
-            stock, sales_record = module_sales.sell_produts(stock, sales_record)
+            stock, sales_record, historical_changes = module_sales.sell_produts(stock, sales_record, historical_changes)
 
         elif option == "5":
             clear_terminal()
-            module_historic.sales(sales_record)
+            module_historic.see_sales_reports(sales_record)
 
         elif option == "6":
             clear_terminal()
@@ -65,3 +67,4 @@ def main():
             print("--OPÇÃO INVÁLIDA!!!--")
         
 main()
+
