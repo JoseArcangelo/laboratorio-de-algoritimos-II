@@ -26,4 +26,3 @@ def sell_produts(stock, sales_record, historical_changes):
     else:
         print("OPS! NÃO POSSUIMOS ESTE PRODUTO!")
     return stock, sales_record, historical_changes
-
