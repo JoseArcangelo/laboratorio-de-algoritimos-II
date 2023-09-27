@@ -14,7 +14,13 @@ def main():
     """Função central do sistema"""
 
     print("---< GESTÃO DE ESTOQUE MERCADINHO DO BRIAN >---")
-    stock = {"chinelo": {"amount": 40, "price_historic": [5], "category": "roupas"}}
+    stock = {
+        "chinelo": {"amount": 40, "price_historic": [5], "category": "roupas"},
+        "camiseta": {"amount": 30, "price_historic": [20], "category": "roupas"},
+        "arroz": {"amount": 100, "price_historic": [10], "category": "alimentos"},
+        "feijao": {"amount": 80, "price_historic": [8], "category": "alimentos"},
+        "sabonete": {"amount": 50, "price_historic": [2], "category": "higiene"},
+        "shampoo": {"amount": 25, "price_historic": [15], "category": "higiene"}}    
     sales_record = []
     historical_changes = []
 
@@ -67,3 +73,4 @@ def main():
             print("--OPÇÃO INVÁLIDA!!!--")
         
 main()
+
