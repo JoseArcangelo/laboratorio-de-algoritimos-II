@@ -35,7 +35,10 @@
 <h3 align="justify">8. Visualizar por Categoria</h3>
 <p>Exibe uma lista de produtos com base em uma categoria especificada.</p>
 
-<h3 align="justify">9. Sair</h3>
+<h3 align="justify">9 Visualizar Histórico de Alterações</h3>
+<p>Exibe uma lista de todas as alteraç~eos realizadas no estoque.</p>
+
+<h3 align="justify">10. Sair</h3>
 <p>Encerra o programa.</p>
 
 <h2 align="justify">Arquitetura do Sistema</h2>
