@@ -2,6 +2,11 @@
 <h1 align="center">Sistemas de informação - Laboratório de Algoritmos II</h1>
 <h1 align="center">AMF</h1>
 
+<p align="center">
+  <img  src="https://s3.dualstack.us-east-2.amazonaws.com/pythondotorg-assets/media/community/logos/python-logo-only.png">
+</p>
+
+
 <h2 align="justify">Gerenciador de Estoque "Mercadinho do Brian"</h2>
 
 <p>Este é um programa em Python que permite gerenciar um estoque de produtos em um mercadinho fictício chamado "Mercadinho do Brian". Com este programa, você pode adicionar produtos, buscar informações sobre produtos, vender produtos, gerar relatórios de vendas e muito mais.</p>
