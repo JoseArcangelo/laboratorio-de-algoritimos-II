@@ -8,7 +8,12 @@ def sell_produts(stock, sales_record, historical_changes):
     print("\n----VENDER PRODUTO----")
     name_product = input("Informe o nome do produto vendido: ")
     if name_product in stock:
-        quantity_sell = int(input(f"Informe a quantidade de {name_product} vendidos: "))
+        while True:
+            quantity_sell = int(input(f"Informe a quantidade de {name_product} vendidos: "))
+            if quantity_sell > 0:
+                break
+            else:
+                print("Ops! Quantidade informada inválida!")
         if quantity_sell > stock[name_product]["amount"]:
             print("OPS! O ESTOQUE NÃO POSSUO A QUANTIDADE QUE DESEJA VENDER!")
         else:
