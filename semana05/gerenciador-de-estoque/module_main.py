@@ -70,7 +70,10 @@ def main():
             break
 
         else:
+            clear_terminal()
             print("--OPÇÃO INVÁLIDA!!!--")
+        
+main()
         
 main()
 
