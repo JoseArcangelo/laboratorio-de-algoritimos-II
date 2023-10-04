@@ -5,6 +5,7 @@ import module_menu
 import os
 
 def clear_terminal():
+    """Função que limpa o terminal"""
     if os.name == 'posix': 
         return os.system('clear')  
     elif os.name == 'nt': 
@@ -15,12 +16,12 @@ def main():
 
     print("---< GESTÃO DE ESTOQUE MERCADINHO DO BRIAN >---")
     stock = {
-        "chinelo": {"amount": 40, "price_historic": [5], "category": "roupas"},
-        "camiseta": {"amount": 30, "price_historic": [20], "category": "roupas"},
-        "arroz": {"amount": 100, "price_historic": [10], "category": "alimentos"},
-        "feijao": {"amount": 80, "price_historic": [8], "category": "alimentos"},
-        "sabonete": {"amount": 50, "price_historic": [2], "category": "higiene"},
-        "shampoo": {"amount": 25, "price_historic": [15], "category": "higiene"}}    
+        "chinelo": {"amount": 40, "price": 5, "price_historic": [5], "category": "roupas"},
+        "camiseta": {"amount": 30, "price": 20, "price_historic": [20], "category": "roupas"},
+        "arroz": {"amount": 100, "price": 10, "price_historic": [10], "category": "alimentos"},
+        "feijao": {"amount": 80, "price": 8, "price_historic": [8], "category": "alimentos"},
+        "sabonete": {"amount": 50, "price": 2, "price_historic": [2], "category": "higiene"},
+        "shampoo": {"amount": 25, "price": 15, "price_historic": [15], "category": "higiene"}}    
     sales_record = []
     historical_changes = []
 
@@ -72,8 +73,6 @@ def main():
         else:
             clear_terminal()
             print("--OPÇÃO INVÁLIDA!!!--")
-        
-main()
         
 main()
 
