@@ -2,7 +2,7 @@ def date():
     while True:
         try:
             date_number = int(input("Informe um mês pelo seu valor númerico: "))
-            if date_number > 12 or date_number < 0:
+            if date_number > 12 or date_number <= 0:
                 raise NameError("putz")
             return date_number 
         except ValueError:
