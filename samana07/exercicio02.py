@@ -3,7 +3,7 @@ def date():
         try:
             date_number = int(input("Informe um mês pelo seu valor númerico: "))
             if date_number > 12 or date_number <= 0:
-                raise NameError("putz")
+                raise NameError("Erro")
             return date_number 
         except ValueError:
             print("[ERRO] o número digitado não é um inteiro!")
