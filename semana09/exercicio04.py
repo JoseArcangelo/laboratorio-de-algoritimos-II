@@ -2,7 +2,7 @@ def find_element(lista, indice):
   try:
     if indice > len(lista) - 1 or indice < 0:
       raise IndexError("Valor inválido")
-    print(lista[indice])
+    return lista[indice]
     
   except IndexError as e:
     print(e)
@@ -12,4 +12,7 @@ try:
   indice = int(input("Informe o indice: "))
 except ValueError:
   print("Valor inválido")
-find_element(lista, indice)
+  
+elemento = find_element(lista, indice)
+if elemento != None:
+  print(elemento)
