@@ -14,11 +14,7 @@ def media(nomes, notas):
 
   media_alunos = []
   for aluno in range(len(names_list)):
-    try: 
-      notas_list[aluno] = notas_list[aluno].split(" ")
-    except IndexError:
-      notas_list.insert(aluno, str(0))
-    
+    notas_list[aluno] = notas_list[aluno].split(" ")
     if "\n" in notas_list[aluno]:
       notas_list[aluno].remove("\n")
 
