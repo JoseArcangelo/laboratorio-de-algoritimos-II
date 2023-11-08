@@ -19,7 +19,7 @@ def criar_arquivo_invertido(list_lines):
 def main():
   list_lines = ler_arquivo()
   list_lines = inverter_list_lines(list_lines)
-  list_lines[0] = f'{list_lines[0]}\n'
+  list_lines[0] = f'{list_lines[0]}'
   list_lines[-1] = list_lines[-1].replace("\n", "")
   criar_arquivo_invertido(list_lines)
 main()
