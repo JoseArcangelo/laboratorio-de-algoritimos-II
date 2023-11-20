@@ -29,6 +29,9 @@
 <h3 align="justify">5. SAIR</h3>
 <p>O jogo é finalizado.</p>
 
+<h2 align="justify">ARQUITETURA</h2>
+
+
 <h2 align="justify">COMO JOGAR</h2>
 <p>O jogo oferece três modos de dificuldade, cada um com suas próprias características:</p>
 
