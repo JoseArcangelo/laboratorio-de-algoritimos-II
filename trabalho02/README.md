@@ -10,3 +10,4 @@
 
 <p>Este é um programa Python que recria o clássico jogo Termo, desafiando os jogadores a adivinharem palavras de 5 letras. O jogo oferece três modos de dificuldade, o modo de adivinhação de uma palavra, o de duas palavras e o de quatro palavras.</p>
 
+<h2 align="justify">Funcionalidades</h2>
