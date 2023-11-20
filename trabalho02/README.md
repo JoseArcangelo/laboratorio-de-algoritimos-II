@@ -52,9 +52,11 @@
 <p>5. Continue aprimorando suas estratégias dentro do limite de tentativas e divirta-se desvendando as palavras no Termo em Python!</p>
 
 <h3 align="justify">Regras:</h3>
-<p>1. Não é permitido números ao informar a tentativa.</p>
-<p>2. Não é permitido espaços em branco ao informar a tentativa.</p>
+<p>1. Não é permitido números ao informar a palavra tentativa.</p>
+<p>2. Não é permitido espaços em branco ao informar a palavra tentativa.</p>
 <p>3. Não é permitido repetir palavras nas tentativas.</p>
+<p>4. Ao escrever a palara tentativa ela deve conter 5 letras.</p>
+
 
 <h2 align="justify">ARQUITETURA</h2>
 
