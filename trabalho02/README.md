@@ -13,3 +13,18 @@
 <h2 align="justify">Funcionalidades</h2>
 
 <p>O jogo possui um menu que contém as seguintes opções: </p>
+
+<h3 align="justify">1.  MODO DE ADIVINHAÇÃO DE UMA PALAVRA</h3>
+<p>O jogador escolhe este modo e tenta adivinhar uma palavra secreta de 5 letras gerada aleatoriamente pelo programa em até 5 tentativas. Caso o jogador acerte essapalavra ela nao aparecerá no jogo posteriormente em outra partida.</p>
+
+<h3 align="justify">2. MODO DUETO</h3>
+<p>Neste modo, o desafio é aumentado, e o jogador precisa adivinhar duas palavras distintas em até 6 tentativas, ambas com 5 letras. Caso o jogador acerte essas palavras elas n]ao apareceram novamente em outra partida.</p>
+
+<h3 align="justify">3. MODO QUARTETO</h3>
+<p> O modo mais desafiador do jogo, no qual o jogador enfrenta a tarefa de decifrar quatro palavras de 5 letras cada em até 8 tentativas. Caso o jogador acerte estas palavras elas não apereceram novamente em outra partida.</p>
+
+<h3 align="justify">4. REDEFINIR PALAVRAS JÁ USADAS</h3>
+<p>Ao executar essa opção as palavras que foram usadas anteriormente poderam ser usadas novamente..</p>
+
+<h3 align="justify">5. SAIR</h3>
+<p>O jogo é finalizado.</p>
