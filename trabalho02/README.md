@@ -29,9 +29,6 @@
 <h3 align="justify">5. SAIR</h3>
 <p>O jogo é finalizado.</p>
 
-<h2 align="justify">ARQUITETURA</h2>
-
-
 <h2 align="justify">COMO JOGAR</h2>
 <p>O jogo oferece três modos de dificuldade, cada um com suas próprias características:</p>
 
@@ -58,6 +55,15 @@
 <p>1. Não é permitido números ao informar a tentativa.</p>
 <p>2. Não é permitido espaços em branco ao informar a tentativa.</p>
 <p>3. Não é permitido repetir palavras nas tentativas.</p>
+
+<h2 align="justify">ARQUITETURA</h2>
+
+<h2 align="justify">AUTORES</h2>
+<p>José Arcangelo de Souza Garlet</p>
+<p>Lucas Descovi</p>
+
+
+
 
 
 
