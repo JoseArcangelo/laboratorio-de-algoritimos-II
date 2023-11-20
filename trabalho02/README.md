@@ -18,13 +18,33 @@
 <p>O jogador escolhe este modo e tenta adivinhar uma palavra secreta de 5 letras gerada aleatoriamente pelo programa em até 5 tentativas. Caso o jogador acerte essapalavra ela nao aparecerá no jogo posteriormente em outra partida.</p>
 
 <h3 align="justify">2. MODO DUETO</h3>
-<p>Neste modo, o desafio é aumentado, e o jogador precisa adivinhar duas palavras distintas em até 6 tentativas, ambas com 5 letras. Caso o jogador acerte essas palavras elas n]ao apareceram novamente em outra partida.</p>
+<p>O jogador precisa adivinhar duas palavras distintas em até 6 tentativas, ambas com 5 letras. Caso o jogador acerte essas palavras elas n]ao apareceram novamente em outra partida.</p>
 
 <h3 align="justify">3. MODO QUARTETO</h3>
-<p> O modo mais desafiador do jogo, no qual o jogador enfrenta a tarefa de decifrar quatro palavras de 5 letras cada em até 8 tentativas. Caso o jogador acerte estas palavras elas não apereceram novamente em outra partida.</p>
+<p> O jogador enfrenta a tarefa de decifrar quatro palavras de 5 letras cada em até 8 tentativas. Caso o jogador acerte estas palavras elas não apereceram novamente em outra partida.</p>
 
 <h3 align="justify">4. REDEFINIR PALAVRAS JÁ USADAS</h3>
-<p>Ao executar essa opção as palavras que foram usadas anteriormente poderam ser usadas novamente..</p>
+<p>Ao executar essa opção as palavras que foram usadas anteriormente poderam ser usadas novamente.</p>
 
 <h3 align="justify">5. SAIR</h3>
 <p>O jogo é finalizado.</p>
+
+<h2 align="justify">COMO JOGAR</h2>
+<h3 align="justify">_Modo de Adivinhação de Uma Palavra: </h3>
+<p> Neste modo, o jogador tem 5 tentativas para adivinhar uma palavra secreta de 5 letras gerada aleatoriamente pelo programa. Após cada tentativa, o jogador recebe feedback visual:</p>
+<p> - Letras corretas e na posição correta são destacadas em verde.</p>
+<p> - Letras corretas, mas em posições erradas, são destacadas em amarelo.</p>
+<p> - Caso a letra não esteja na palavra sorteada, ela permanecerá em branco.</p>
+
+<h3 align="justify">_Modo de Adivinhação de Duas Palavras:  </h3>
+<p>  A dificuldade aumenta, e o jogador tem 6 tentativas para adivinhar duas palavras distintas, ambas com 5 letras. O feedback visual é fornecido da mesma forma que no Modo de Uma Palavra.</p>
+
+<h3 align="justify">_Modo de Adivinhação de Quatro Palavras: </h3>
+<p> - O modo mais desafiador, no qual o jogador enfrenta a tarefa de decifrar quatro palavras de 5 letras cada. Aqui, são concedidas 8 tentativas, e o feedback detalhado ajuda o jogador a refinar suas estratégias de adivinhação.</p>
+
+
+
+
+
+
+
