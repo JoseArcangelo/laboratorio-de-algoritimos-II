@@ -45,6 +45,17 @@
 <p> - O modo mais desafiador, no qual o jogador enfrenta a tarefa de decifrar quatro palavras de 5 letras cada. Aqui, são concedidas 8 tentativas, e o feedback detalhado ajuda o jogador a refinar suas estratégias de adivinhação.</p>
 
 <h3 align="justify">Passo a passo para jogar:</h3>
+<p>1. Execute o programa em Python.</p>
+<p>2. Escolha o modo de dificuldade desejado.</p>
+<p>3. Insira suas tentativas para adivinhar as palavras.</p>
+<p>4. Receba feedback após cada tentativa, com destaque visual para letras corretas e suas posições.</p>
+<p>5. Continue aprimorando suas estratégias dentro do limite de tentativas e divirta-se desvendando as palavras no Termo em Python!</p>
+
+<h3 align="justify">Regras:</h3>
+<p>1. Não é permitido números ao informar a tentativa.</p>
+<p>2. Não é permitido espaços em branco ao informar a tentativa.</p>
+<p>3. Não é permitido repetir palavras nas tentativas.</p>
+
 
 
 
