@@ -30,6 +30,8 @@
 <p>O jogo é finalizado.</p>
 
 <h2 align="justify">COMO JOGAR</h2>
+<p>O jogo oferece três modos de dificuldade, cada um com suas próprias características:</p>
+
 <h3 align="justify">_Modo de Adivinhação de Uma Palavra: </h3>
 <p> Neste modo, o jogador tem 5 tentativas para adivinhar uma palavra secreta de 5 letras gerada aleatoriamente pelo programa. Após cada tentativa, o jogador recebe feedback visual:</p>
 <p> - Letras corretas e na posição correta são destacadas em verde.</p>
@@ -41,6 +43,12 @@
 
 <h3 align="justify">_Modo de Adivinhação de Quatro Palavras: </h3>
 <p> - O modo mais desafiador, no qual o jogador enfrenta a tarefa de decifrar quatro palavras de 5 letras cada. Aqui, são concedidas 8 tentativas, e o feedback detalhado ajuda o jogador a refinar suas estratégias de adivinhação.</p>
+
+<h3 align="justify">Passo a passo para jogar:</h3>
+
+
+
+
 
 
 
