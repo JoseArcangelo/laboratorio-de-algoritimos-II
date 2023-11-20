@@ -2,33 +2,36 @@ import random
 import module_utilits
 
 def sortear_palavras(total_words):
+   """Função que sortei as palavras de acordo com o modo de jogo(uma palavra, dueto, quarteto)."""
    ##Sortear as palavras, verificando se alguma ja foi utilizada
-   folder_words = open('arquivos/words.txt', 'r')
-   folder_words_usadas = open('arquivos/words_usadas.txt', 'r')
-   list_words_usadas = folder_words_usadas.readlines()
-   list_words = folder_words.readlines()
-   folder_words.close()
-   folder_words_usadas.close()
-   palavras_sorteadas = []
+   file_words = open('arquivos/words.txt', 'r')
+   file_used_words = open('arquivos/words_usadas.txt', 'r')
+   list_used_words = file_used_words.readlines()
+   list_words = file_words.readlines()
+   file_words.close()
+   file_used_words.close()
+   drawn_words = []
 
-   if (len(list_words) - len(list_words_usadas)) < total_words:
+   if (len(list_words) - len(list_used_words)) < total_words:
       return False
    
    while True:
       word = list_words[random.randint(0, len(list_words) - 1)].upper()
       
-      if word not in list_words_usadas:
+      if word not in list_used_words:
          word = word.replace("\n", "")
          
-         if word not in palavras_sorteadas and len(word) == 5:
-            palavras_sorteadas.append(word)
+         if word not in drawn_words and len(word) == 5:
+            drawn_words.append(word)
          
-      if len(palavras_sorteadas) == total_words:
+      if len(drawn_words) == total_words:
          break
 
-   return palavras_sorteadas
+   return drawn_words
 
 def input_word_tentativa(words_usadas):
+   """Função que pede ao jogador a palavra tentativa e verifica se ela já foi utilizada, 
+      se tem 5 letras e sem não tem números nem espaços em branco."""
    while True:
       try:
          word = input("\nInforme uma palavra: ").upper()
@@ -46,85 +49,88 @@ def input_word_tentativa(words_usadas):
       except NameError as e:
          print(e)
 
-def colorir_palavras(round, letras_verdes, letras_amarelas, historico_palavras_tentadas, palavra, palavra_tentativa , palavras_sorteadas):
-   lista_letras_verdes = list(letras_verdes.values())
-   lista_indices_verdes = list(letras_verdes.keys()) 
+def colorir_palavras(attempts, green_letters, yellow_letters, colorful_tried_words, word, palavra_tentativa, drawn_words):
+   """Função que adiciona cor as letras e guarda as tentativas em uma lista dentro de uma lista."""
+   list_green_letters = list(green_letters.values())
+   list_indices_letters_green = list(green_letters.keys()) 
    for i in range(5):
 
-      if i in lista_indices_verdes:
+      if i in list_indices_letters_green:
          colored_letter = f"\033[32m{palavra_tentativa[i]}\033[0m"
-         historico_palavras_tentadas[round][palavra] = f"{historico_palavras_tentadas[round][palavra]}{colored_letter} | "
+         colorful_tried_words[attempts][word] = f"{colorful_tried_words[attempts][word]}{colored_letter} | "
       
-      elif i in letras_amarelas and lista_letras_verdes.count(palavra_tentativa[i]) != palavras_sorteadas[palavra].count(palavra_tentativa[i]):
+      elif i in yellow_letters and list_green_letters.count(palavra_tentativa[i]) != drawn_words[word].count(palavra_tentativa[i]):
          colored_letter = f"\033[33m{palavra_tentativa[i]}\033[0m"
-         historico_palavras_tentadas[round][palavra] = f"{historico_palavras_tentadas[round][palavra]}{colored_letter} | "
-     
+         colorful_tried_words[attempts][word] = f"{colorful_tried_words[attempts][word]}{colored_letter} | "
+
       else:
-         historico_palavras_tentadas[round][palavra] = f"{historico_palavras_tentadas[round][palavra]}{palavra_tentativa[i]} | "
-   return historico_palavras_tentadas
+         colorful_tried_words[attempts][word] = f"{colorful_tried_words[attempts][word]}{palavra_tentativa[i]} | "
+   return colorful_tried_words
 
 def game(total_words):
+   """Função principal que rodo o jogo, chamando outras funções 
+      e separando as letras corretas ou em posições erradas."""
    ##Sortear as palavras, verificando se alguma ja foi utilizada
-   palavras_sorteadas = sortear_palavras(total_words)
-   if palavras_sorteadas == False:
+   drawn_words = sortear_palavras(total_words)
+   if drawn_words == False:
       print("QUANTIDADE DE PALAVRAS INSUFICIENTES!")
       return
    
    ##Criando um modo de conferir se o jogador acertou alguma palavra, juntamente com um contador e uma lista para guardar as palavras tentadas
-   historico_palavras_tentadas = []
-   round = 0
-   acertos = []
-   words_usadas = []
+   colorful_tried_words = []
+   attempts = 0
+   successful_check = []
+   record_words_used = []
    for i in range(total_words):
-      acertos.append(False)
+      successful_check.append(False)
       
   ###Tentativas do jogador, conferindo se as letras das palavras
    while True:
-      print(palavras_sorteadas)
-      historico_palavras_tentadas.append([])
-      palavra_tentativa, words_usadas = input_word_tentativa(words_usadas)
+      print(drawn_words)
+      colorful_tried_words.append([])
+      palavra_tentativa, record_words_used = input_word_tentativa(record_words_used)
       module_utilits.clear_terminal()
       
-      for palavra in range(len(palavras_sorteadas)):
-         historico_palavras_tentadas[round].append("")
-         letras_verdes = {}
-         letras_amarelas = []
-         if acertos[palavra] == True:
-            historico_palavras_tentadas[round][palavra] = historico_palavras_tentadas[round-1][palavra]
+      for word in range(len(drawn_words)):
+         colorful_tried_words[attempts].append("")
+         green_letters = {}
+         yellow_letters = []
+         if successful_check[word] == True:
+            colorful_tried_words[attempts][word] = colorful_tried_words[attempts-1][word]
          else:
-            for letra in range(len(palavras_sorteadas[palavra])):
-               if palavra_tentativa[letra] == palavras_sorteadas[palavra][letra]:
-                  letras_verdes[letra] = palavra_tentativa[letra]
+            for letter in range(len(drawn_words[word])):
+               if palavra_tentativa[letter] == drawn_words[word][letter]:
+                  green_letters[letter] = palavra_tentativa[letter]
 
-               elif palavra_tentativa[letra] in palavras_sorteadas[palavra]:
-                  letras_amarelas.append(letra)
+               elif palavra_tentativa[letter] in drawn_words[word]:
+                  yellow_letters.append(letter)
                
-               if palavra_tentativa == palavras_sorteadas[palavra]:
-                  acertos[palavra] = True
+               if palavra_tentativa == drawn_words[word]:
+                  successful_check[word] = True
          
-            historico_palavras_tentadas = colorir_palavras(round, letras_verdes, letras_amarelas, historico_palavras_tentadas, palavra, palavra_tentativa, palavras_sorteadas)
+            colorful_tried_words = colorir_palavras(attempts, green_letters, yellow_letters, colorful_tried_words, word, palavra_tentativa, drawn_words)
       
-      for i in range(len(historico_palavras_tentadas)):
-         if len(palavras_sorteadas) == 4:
-            print(historico_palavras_tentadas[i][0], historico_palavras_tentadas[i][1], historico_palavras_tentadas[i][2], historico_palavras_tentadas[i][3])
+      for i in range(len(colorful_tried_words)):
+         if len(drawn_words) == 4:
+            print(colorful_tried_words[i][0], colorful_tried_words[i][1], colorful_tried_words[i][2], colorful_tried_words[i][3])
       
-         elif len(palavras_sorteadas) == 2:
-            print(historico_palavras_tentadas[i][0], historico_palavras_tentadas[i][1])
+         elif len(drawn_words) == 2:
+            print(colorful_tried_words[i][0], colorful_tried_words[i][1])
 
          else:
-            print(historico_palavras_tentadas[i][0])
-      round += 1
+            print(colorful_tried_words[i][0])
+      attempts += 1
 
-      if len(palavras_sorteadas) == 4 and round == 8 or len(palavras_sorteadas) == 2 and round == 6 or len(palavras_sorteadas) == 1 and round == 5:
+      if len(drawn_words) == 4 and attempts == 8 or len(drawn_words) == 2 and attempts == 6 or len(drawn_words) == 1 and attempts == 5:
          print("[LOSS] VOCÊ PERDEU!")
          confirm = input("::PRECIONE ENTER PARA VOLTAR AO MENU::")
          break
       
-      if len(palavras_sorteadas) == acertos.count(True):
+      if len(drawn_words) == successful_check.count(True):
          print("[WIN] VOCÊ VENCEU O JOGO!")
          confirm = input("::PRECIONE ENTER PARA VOLTAR AO MENU::")
          folder_words_usadas = open('arquivos/words_usadas.txt', 'a')
-         for word_usada in palavras_sorteadas:
+         for word_usada in drawn_words:
             folder_words_usadas.write(word_usada)
             folder_words_usadas.write("\n")
          folder_words_usadas.close()
