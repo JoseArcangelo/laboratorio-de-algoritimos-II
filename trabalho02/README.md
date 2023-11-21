@@ -62,7 +62,20 @@
 
 <p> O sistema é dividido em módulos, modulo main sendo o arquivo central do sistema, e os outros 4 módulos: module_game, module_menu e module_utilits. Cada módulo possui um conjunto de funções.</p>
 
+<h3>module_menu</h3>
+<p>Contém o menu de opções do sistema.</p>
 
+<h3>module_game</h3>
+<p>Contém mais a oarte funcional do game, onde são sorteadas as palavras, verificações de feedback e verificações de acerto.</p>
+
+<h3>module_utilits</h3>
+<p>Modulo que contém algumas funcionalidades uteis ao sistema de forma estética, como o de limpar o terminal.</p>
+
+<h3>module_main</h3>
+<p>Módulo central do sistema</p>
+
+<h3>Arquivos</h3>
+<p>na pasta arquivos contém o arquivo com as palavras que podem ser sorteadas e um outro arquivo com as palavras que já foram usadas.</p>
 
 <h2 align="justify">AUTORES</h2>
 <p>José Arcangelo de Souza Garlet</p>
