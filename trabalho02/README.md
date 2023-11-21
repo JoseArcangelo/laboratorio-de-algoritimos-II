@@ -74,24 +74,12 @@
 <h3>module_main</h3>
 <p>Módulo central do sistema</p>
 
+<h3>module_reset_words_used</h3>
+<p>Comtém a função de redefinir as palavras já utilizadas.</p>
+
 <h3>Arquivos</h3>
 <p>na pasta arquivos contém o arquivo com as palavras que podem ser sorteadas e um outro arquivo com as palavras que já foram usadas.</p>
 
 <h2 align="justify">AUTORES</h2>
 <p>José Arcangelo de Souza Garlet</p>
 <p>Lucas Descovi</p>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
