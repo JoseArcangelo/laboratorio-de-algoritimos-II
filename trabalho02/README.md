@@ -60,7 +60,7 @@
 
 <h2 align="justify">ARQUITETURA</h2>
 
-<p> O sistema é dividido em módulos, modulo main sendo o arquivo central do sistema, e os outros 4 módulos: module_game, module_menu e module_utilits. Cada módulo possui um conjunto de funções. Também possui uma pasta com dois arquivos: words e words_usadas.</p>
+<p> O sistema é dividido em módulos, modulo main sendo o arquivo central do sistema, e os outros 4 módulos: module_game, module_menu, module_utilits e module_reset_words_used. Cada módulo possui um conjunto de funções. Também possui uma pasta com dois arquivos: words e words_usadas.</p>
 
 <h3>module_menu</h3>
 <p>Contém o menu de opções do sistema.</p>
