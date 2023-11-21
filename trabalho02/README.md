@@ -8,7 +8,7 @@
 
 <h1 align="center">T | E | R | M | O</h1>
 
-<p>Este é um programa Python que recria o clássico jogo Termo, desafiando os jogadores a adivinharem palavras de 5 letras. O jogo oferece três modos de dificuldade, o modo de adivinhação de uma palavra, o de adivinhação de duas palavras e o de adivinhação de quatro palavras. Também possui uma pasta com dois arquivos: words e words_usadas.</p>
+<p>Este é um programa Python que recria o clássico jogo Termo, desafiando os jogadores a adivinharem palavras de 5 letras. O jogo oferece três modos de dificuldade, o modo de adivinhação de uma palavra, o de adivinhação de duas palavras e o de adivinhação de quatro palavras.</p>
 
 <h2 align="justify">Funcionalidades</h2>
 
@@ -60,7 +60,7 @@
 
 <h2 align="justify">ARQUITETURA</h2>
 
-<p> O sistema é dividido em módulos, modulo main sendo o arquivo central do sistema, e os outros 4 módulos: module_game, module_menu e module_utilits. Cada módulo possui um conjunto de funções.</p>
+<p> O sistema é dividido em módulos, modulo main sendo o arquivo central do sistema, e os outros 4 módulos: module_game, module_menu e module_utilits. Cada módulo possui um conjunto de funções. Também possui uma pasta com dois arquivos: words e words_usadas.</p>
 
 <h3>module_menu</h3>
 <p>Contém o menu de opções do sistema.</p>
