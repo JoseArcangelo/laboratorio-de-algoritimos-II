@@ -55,7 +55,7 @@
 <p>1. Não é permitido números ao informar a palavra tentativa.</p>
 <p>2. Não é permitido espaços em branco ao informar a palavra tentativa.</p>
 <p>3. Não é permitido repetir palavras nas tentativas.</p>
-<p>4. Ao escrever a palara tentativa ela deve conter 5 letras.</p>
+<p>4. Ao escrever a palavra tentativa ela deve conter 5 letras.</p>
 
 
 <h2 align="justify">ARQUITETURA</h2>
