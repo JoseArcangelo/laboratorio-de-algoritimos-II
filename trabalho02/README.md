@@ -60,6 +60,10 @@
 
 <h2 align="justify">ARQUITETURA</h2>
 
+<p> O sistema é dividido em módulos, modulo main sendo o arquivo central do sistema, e os outros 4 módulos: module_game, module_menu e module_utilits. Cada módulo possui um conjunto de funções.</p>
+
+
+
 <h2 align="justify">AUTORES</h2>
 <p>José Arcangelo de Souza Garlet</p>
 <p>Lucas Descovi</p>
