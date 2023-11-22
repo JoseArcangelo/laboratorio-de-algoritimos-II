@@ -88,7 +88,6 @@ def game(total_words):
       
    ###Tentativas do jogador, conferindo as letras das palavras 
    while True:
-      print(drawn_words)
       colorful_tried_words.append([])
       word_try, record_words_used = input_word_tentativa(record_words_used)
       module_utilits.clear_terminal()
